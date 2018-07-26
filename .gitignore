@@ -1,0 +1,8 @@
+#IDE files
+idea/
+
+# Virtual environment folder
+venv/
+
+#reports
+allure-report/

@@ -3,7 +3,7 @@ import allure
 
 BASE_URL = "https://reqres.in"
 
-class TestClass(object):
+class TestGetUserData(object):
     @allure.feature('Saving of users data')
     @allure.story('Get list of users')
     def test_one(self):
