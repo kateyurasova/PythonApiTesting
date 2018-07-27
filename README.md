@@ -1,12 +1,12 @@
 # Prerequisites:
 Before running test use should install python 3.6 at you environments
 The perform the set of command for installing libraries and components:
-pip install -U pytest
-pip install allure-pytest
-pip install requests
-pip install StringGenerator
-pip install pytest-xdist
-pip install pytest-logger
+> pip install -U pytest
+> pip install allure-pytest
+> pip install requests
+> pip install StringGenerator
+> pip install pytest-xdist
+> pip install pytest-logger
 
 # For running tests use the following command
 py.test --alluredir=allure-results -s -q
