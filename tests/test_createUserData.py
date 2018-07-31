@@ -10,17 +10,17 @@ BASE_URL = "https://reqres.in"
 logger = logging.getLogger('foo')
 
 
-@pytest.mark.parametrize("description,name,job", [
-    ("Values with min length", StringGenerator('[\l\d]{1:1}').render(), StringGenerator('[\l\d]{1:1}').render()),
-    ("Values with max length", StringGenerator('[\l\d]{20:20}').render(), StringGenerator('[\l\d]{20:20}').render()),
-    ("Random numeric values", StringGenerator('[\d]{4:20}').render(), StringGenerator('[\d]{4:20}').render()),
-], ids=["1","2","3"])
-
-
+@pytest.mark.parametrize("name,job", [
+    (StringGenerator('[\l\d]{1:1}').render(), StringGenerator('[\l\d]{1:1}').render()),
+    (StringGenerator('[\l\d]{20:20}').render(), StringGenerator('[\l\d]{20:20}').render()),
+    (StringGenerator('[\d]{4:20}').render(), StringGenerator('[\d]{4:20}').render())],
+                         ids=["Values with min length",
+                              "Values with max length",
+                              "Random numeric values"])
 class TestCreateUserData(object):
     @allure.feature('User is able to create user in the system')
     @allure.story('Create User:')
-    def test_create_user(self, description, name, job):
+    def test_create_user(self, name, job):
         # Testing data
         user_data = {
             "name": "%s" % name,
