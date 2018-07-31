@@ -21,13 +21,13 @@ py.test --alluredir=allure-results -s -q
 py.test --alluredir=allure-results -s -q -n 10
 ```
 
-###  Note: Before running tests it makes sense to clear allure-results folder if it is not empty
-```
-rmdir allure-results /s /q
-```
-
 ###  For report generation
 ```
 allure serve allure-results
+```
+
+Note: Before running tests it makes sense to clear allure-results folder if it is not empty
+```
+rmdir allure-results /s /q
 ```
 
