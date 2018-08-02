@@ -4,12 +4,16 @@ Before running test use should install python 3.6 at you environments
 Instructions for Windows:
 The perform the set of command for installing libraries and components:
 ```
-> pip install -U pytest
-> pip install allure-pytest
-> pip install requests
-> pip install StringGenerator
-> pip install pytest-xdist
-> pip install pytest-logger
+pip install -U pytest
+pip install allure-pytest
+pip install requests
+pip install StringGenerator
+pip install pytest-xdist
+pip install pytest-logg
+```
+or perform the command to install all components based on configuration:
+```
+pip install -r requirements.txt
 ```
 ###  For running tests use the following command
 ```
